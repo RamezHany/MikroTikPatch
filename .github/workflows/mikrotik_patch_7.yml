@@ -133,7 +133,7 @@ jobs:
       - name: Get ChangeLog
         if: steps.cache-changelog.outputs.cache-hit != 'true'
         run: |
-            wget -nv -O changelog-${{ env.LATEST_VERSION }}-${{ matrix.channel }} https://${{ env.MIKRO_UPGRADE_URL }}/routeros/$LATEST_VERSION/CHANGELOG
+            wget -nv -O changelog-${{ env.LATEST_VERSION }}-${{ matrix.channel }} https://download.mikrotik.com/routeros/$LATEST_VERSION/CHANGELOG
             cat changelog-${{ env.LATEST_VERSION }}-${{ matrix.channel }} 
     
       - name: cache translation
